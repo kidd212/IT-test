@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Untitled-1.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Welcome back!</h2>
+        <p>Input your details to have access to your account.</p>
+
+        <!-- The form will automatically redirect to "index.html" upon submission -->
+        <form class="login-form" action="un.html" method="GET">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                <span class="toggle-password"></span>
+            </div>
+
+            <a href="#" class="forgot-password">Forgotten password? Reset it now</a>
+            <button type="submit">Login</button>
+        </form>
+
+        <p class="register">Don’t have an account? <a href="#">Register now</a></p>
+    </div>
+</body>
+</html>

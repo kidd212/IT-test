@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    /* Custom Styles */
+    .calendar {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .calendar .active-day {
+      background-color: #38c172;
+      color: #fff;
+    }
+    .calendar .holiday {
+      color: #e3342f;
+    }
+    .table-status-success {
+      color: #38c172;
+    }
+    .table-status-pending {
+      color: #f6993f;
+    }
+    .table-status-error {
+      color: #e3342f;
+    }
+    .table th, .table td {
+      vertical-align: middle;
+    }
+    .status-change {
+      color: #38c172;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <!-- Dashboard Header -->
+  <div class="row g-3 mb-5">
+    <!-- Weather -->
+    <div class="col-md-3">
+      <div class="card text-center p-3">
+        <p class="card-title">Good Morning, Abubakar!</p>
+        <div class="weather-temp">28°C</div>
+        <div class="weather-details">
+          <small>🌧️ Rainy Day</small><br>
+          <small>Abuja, Nigeria</small><br>
+          <small>24 July 2022</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Time -->
+    <div class="col-md-3">
+      <div class="card text-center p-3">
+        <p class="card-title">TIME</p>
+        <div class="time-text">09:15 AM</div>
+        <button class="btn btn-outline-primary mt-3">Clock In</button>
+      </div>
+    </div>
+
+    <!-- Total Requests -->
+    <div class="col-md-3">
+      <div class="card text-center p-3">
+        <p class="card-title">TOTAL REQUESTS</p>
+        <div class="value-text">10,000</div>
+        <small class="status-change">▲ 2.3% Yearly</small>
+      </div>
+    </div>
+
+    <!-- Total Reviews -->
+    <div class="col-md-3">
+      <div class="card text-center p-3">
+        <p class="card-title">TOTAL REVIEWS</p>
+        <div class="value-text">40,000</div>
+        <small class="status-change">▲ 2.3% Yearly</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Content -->
+  <div class="row g-3">
+    <!-- To-Do List -->
+    <div class="col-md-3">
+      <div class="card p-3">
+        <h6 class="card-title">TO-DO LIST</h6>
+        <p><strong>28th September</strong></p>
+        <ul class="list-unstyled">
+          <li>Meeting with Designer <span class="text-success">&#10004;</span></li>
+          <li>Meeting with Designer <span class="text-muted">&#9675;</span></li>
+          <li>Meeting with Designer <span class="text-muted">&#9675;</span></li>
+          <li>Meeting with Designer <span class="text-muted">&#9675;</span></li>
+        </ul>
+        <input type="text" class="form-control mt-3" placeholder="Type Event Here">
+      </div>
+    </div>
+
+    <!-- All Recent Reviews -->
+    <div class="col-md-3">
+      <div class="card p-3">
+        <h6 class="card-title">ALL RECENT REVIEWS</h6>
+        <p>Title of Review</p>
+        <p><small>Created by: John Doe</small> - <span class="table-status-success">Approved</span></p>
+        <p>Title of Review</p>
+        <p><small>Created by: Jane Doe</small> - <span class="table-status-pending">In Progress</span></p>
+        <p>Title of Review</p>
+        <p><small>Created by: Sam Smith</small> - <span class="table-status-error">Declined</span></p>
+        <button class="btn btn-outline-primary w-100 mt-3">See All</button>
+      </div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="col-md-3">
+      <div class="calendar p-3">
+        <h6 class="fw-bold">FEBRUARY</h6>
+        <table class="table table-borderless text-center">
+          <thead>
+            <tr>
+              <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td></td><td></td><td></td><td class="active-day">1</td><td>2</td><td>3</td><td>4</td></tr>
+            <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td class="holiday">10</td><td>11</td></tr>
+            <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td class="holiday">18</td></tr>
+            <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+            <tr><td>26</td><td>27</td><td>28</td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        <p><span class="active-day me-2">Active Day</span> <span class="holiday">Holiday</span></p>
+      </div>
+    </div>
+
+    <!-- Financial Transactions -->
+    <div class="col-md-6">
+      <h6 class="fw-bold">Financial Transactions</h6>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>05/03/2023</td>
+            <td>Description goes here</td>
+            <td>NGN200,000</td>
+            <td class="table-status-success">Successful</td>
+          </tr>
+          <tr>
+            <td>06/03/2023</td>
+            <td>Description goes here</td>
+            <td>NGN200,000</td>
+            <td class="table-status-pending">Pending</td>
+          </tr>
+          <tr>
+            <td>08/03/2023</td>
+            <td>Description goes here</td>
+            <td>NGN200,000</td>
+            <td class="table-status-error">Error</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="#" class="text-primary">See more &raquo;</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
